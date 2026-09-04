@@ -1,0 +1,2619 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+            color: #333;
+            background-image: url("https://ecosystem.hubspot.com/marketplace/website/thrifty-theme-by-juice-tactics-snacks");
+            /* background-image: url("https://img.freepik.com/free-vector/geometric-background_53876-115958.jpg?t=st=1743924946~exp=1743928546~hmac=40cf08cfdee7685ad8c302a0a9c7f4d311b266c5a59ede75f190472d97886028&w=1060"); */
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            width: 100%;
+            overflow-x: hidden;
+        }
+
+        body {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        /* =========================
+   HEADER / NAVIGATION
+========================= */
+
+        header {
+            width: min(1200px, calc(100% - 40px));
+            margin: 40px auto 20px;
+            padding: 15px 30px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+
+            background: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 20px;
+
+            box-sizing: border-box;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-shrink: 0;
+        }
+
+        .img-icon {
+            width: 40px;
+            height: 40px;
+            position: static;
+        }
+
+        .img-logo {
+            font-weight: bold;
+            font-size: 24px;
+            position: static;
+            white-space: nowrap;
+        }
+
+        .button {
+            margin-left: auto;
+        }
+
+        nav ul {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            margin: 0;
+        }
+
+        nav ul li a {
+            display: block;
+            padding: 8px 10px;
+
+            text-decoration: none;
+            color: #333;
+            border-radius: 6px;
+            transition: 0.3s ease;
+        }
+
+        .login-btn {
+            flex-shrink: 0;
+
+            background-color: #2a66f2;
+            color: white;
+            padding: 10px 20px;
+
+            border-radius: 5px;
+            text-decoration: none;
+            white-space: nowrap;
+        }
+
+        .hamburger {
+            display: none;
+        }
+
+        /* default hover effect */
+        a:hover {
+            color: black;
+            background: yellow;
+        }
+
+        @media (hover: hover) {
+
+            /* when hover is supported */
+            a:hover {
+                color: white;
+                background: black;
+            }
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 7px;
+            margin: 0px;
+            display: flex;
+            gap: 10px;
+
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        .login-btn {
+            background-color: #2a66f2;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+
+        }
+
+        /* =========================
+   HERO SECTION
+========================= */
+
+        .hero {
+            width: min(1200px, calc(100% - 40px));
+            margin: 0 auto;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 60px;
+
+            padding: 60px 0;
+            background: white;
+        }
+
+        .hero-text {
+            flex: 1;
+            max-width: 600px;
+            text-align: left;
+        }
+
+        .hero-text h1 {
+            margin: 0;
+            font-size: clamp(38px, 5vw, 60px);
+            line-height: 1.05;
+            font-weight: bold;
+        }
+
+        .hero-text span {
+            color: #2a66f2;
+        }
+
+        .hero-text p {
+            margin: 20px 0;
+            font-size: clamp(16px, 2vw, 25px);
+            line-height: 1.5;
+            color: #7b7777;
+        }
+
+        .cta-btn {
+            display: inline-block;
+
+            background-color: #2a66f2;
+            color: white;
+
+            padding: 12px 20px;
+            margin-top: 10px;
+
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .hero-image {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .hero-image img {
+            display: block;
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+
+            margin-left: auto;
+
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Tools Section */
+        .logo-container {
+            white-space: nowrap;
+            overflow: hidden;
+            width: 100%;
+            padding: 20px 0;
+            box-sizing: border-box;
+            background-color: #fff;
+        }
+
+        .logo-strip {
+            display: inline-block;
+            animation: 0s scroll 30s linear infinite;
+        }
+
+        .logo-strip img {
+            height: 35px;
+            margin: 0 30px;
+            vertical-align: middle;
+        }
+
+        @keyframes scroll {
+            from {
+                transform: translateX(100%);
+            }
+
+            to {
+                transform: translateX(-100%);
+            }
+        }
+
+        h2 {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 40px;
+        }
+
+        /* =========================
+   POWER SECTION
+========================= */
+
+        .power {
+            width: min(1000px, calc(100% - 40px));
+            margin: 70px auto 40px;
+            text-align: center;
+        }
+
+        .power h1 {
+            margin: 0;
+            padding: 0;
+
+            font-size: clamp(30px, 4vw, 40px);
+            line-height: 1.2;
+        }
+
+        .power p {
+            max-width: 850px;
+            margin: 25px auto 0;
+
+            font-size: clamp(16px, 2vw, 25px);
+            line-height: 1.6;
+
+            color: #7b7777;
+        }
+
+        /* =========================
+   FEATURES SECTION
+========================= */
+
+        .features {
+            width: min(1200px, calc(100% - 40px));
+            margin: 40px auto;
+            padding: 30px;
+
+            background: white;
+            border-radius: 20px;
+            text-align: center;
+        }
+
+        .first-raw {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .container1,
+        .container2,
+        .container3 {
+            display: contents;
+        }
+
+        .feature-card {
+            width: 100%;
+            min-width: 0;
+            height: auto;
+
+            padding: 25px;
+
+            background: whitesmoke;
+            color: black;
+
+            border-radius: 25px;
+
+            text-align: left;
+
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-card img {
+            width: 60px;
+            height: 60px;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+
+        .feature-card h2 {
+            margin: 0 0 12px;
+            font-size: 20px;
+            line-height: 1.3;
+        }
+
+        .feature-card p {
+            margin: 0;
+            color: #7b7777;
+            line-height: 1.5;
+        }
+
+        .trust-card,
+        .testimonial {
+            background: whitesmoke;
+            color: black;
+            padding: 15px;
+            margin: 10px;
+            border-radius: 25px;
+            display: inline-block;
+            text-align: left;
+            align-content: center;
+            height: 215px;
+            width: 375px;
+        }
+
+        /* =========================
+   WHO NEEDS OUR SOLUTION
+========================= */
+
+        .who-needs {
+            width: min(1200px, calc(100% - 40px));
+            margin: 80px auto;
+
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 60px;
+        }
+
+        .image2 {
+            width: 100%;
+        }
+
+        .image2 img {
+            display: block;
+            width: 100%;
+            height: auto;
+
+            padding: 0;
+            margin: 0;
+
+            border-radius: 40px;
+            object-fit: cover;
+        }
+
+        .who-needs>div:last-child {
+            min-width: 0;
+        }
+
+        .who-needs h2 {
+            margin: 0 0 20px;
+            text-align: left;
+            font-size: clamp(30px, 4vw, 40px);
+            line-height: 1.2;
+        }
+
+        .who-needs p {
+            margin: 0 0 25px;
+
+            font-size: clamp(16px, 2vw, 22px);
+            line-height: 1.6;
+
+            color: #7b7777;
+        }
+
+        .bank-card {
+            width: 100%;
+            height: auto;
+
+            padding: 20px;
+            margin: 25px 0;
+
+            background: whitesmoke;
+            border-radius: 25px;
+
+            box-sizing: border-box;
+        }
+
+        .bank-card h5 {
+            margin: 0 0 8px;
+            font-size: 20px;
+        }
+
+        .bank-card p {
+            margin: 0;
+            font-size: 17px;
+        }
+
+        /* Previous / Next buttons */
+        .btn1,
+        .btn2 {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+
+            width: 44px;
+            height: 44px;
+
+            padding: 0;
+            margin: 10px 5px;
+
+            border-radius: 50%;
+            text-decoration: none;
+
+            box-sizing: border-box;
+        }
+
+        .btn1 {
+            background: white;
+            color: #2a66f2;
+            border: 2px solid #2a66f2;
+        }
+
+        .btn2 {
+            background: #2a66f2;
+            color: white;
+        }
+
+        .btn1 div,
+        .btn2 div {
+            margin: 0;
+        }
+
+        .trust-card,
+        .testimonial {
+            background: whitesmoke;
+            color: black;
+            padding: 15px;
+            margin: 0px;
+            border-radius: 25px;
+            display: inline-block;
+            text-align: left;
+            align-content: center;
+            height: 115px;
+            width: 620px;
+        }
+
+        /* contacts Section */
+        .contact-container {
+            white-space: nowrap;
+            color: white;
+            overflow: hidden;
+            width: 100%;
+            padding: 20px 0;
+            box-sizing: border-box;
+            background-color: #9ab6f7;
+        }
+
+        .contact-strip {
+            display: inline-block;
+            animation: 0s scroll 30s linear infinite;
+        }
+
+        .contact-strip img {
+            height: 35px;
+            margin: 0 30px;
+            vertical-align: middle;
+        }
+
+        @keyframes scroll {
+            from {
+                transform: translateX(100%);
+            }
+
+            to {
+                transform: translateX(-100%);
+            }
+        }
+
+        .testimonial {
+            background: whitesmoke;
+            color: black;
+            padding: 15px;
+            margin: 0px;
+            border-radius: 25px;
+            display: inline-block;
+            text-align: left;
+            align-content: center;
+            height: 190px;
+            width: 655px;
+        }
+
+        /* =========================
+   TRUST SECTION
+========================= */
+
+        .trust-card,
+        .testimonial {
+            background: whitesmoke;
+            color: black;
+            padding: 15px;
+            margin: 0px;
+            border-radius: 25px;
+            display: inline-block;
+            text-align: left;
+            align-content: center;
+            height: 190px;
+            width: 655px;
+        }
+
+        .trust-card h2 {
+            text-align: left;
+            margin-top: 16px;
+            font-size: 20px;
+        }
+
+        .trust-card p {
+            text-align: left;
+            margin-top: 16px;
+            color: #7b7777;
+
+        }
+
+
+        .trust-card img {
+            height: 60px;
+            width: 60px;
+        }
+
+        .trust {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 17px 100px;
+            background: white;
+            margin: 0px;
+        }
+
+        .trust-card {
+            max-width: 50%;
+            text-align: left;
+            margin-bottom: 20px;
+            margin-left: 10px;
+            margin-right: 20px;
+        }
+
+        .container4 {
+            margin-right: -308px;
+            margin-bottom: -2px;
+            margin-top: 20px;
+        }
+
+        .container5 {
+            margin-right: -308px;
+            margin-bottom: -2px;
+            margin-top: 20px;
+        }
+
+        .image3 img {
+            width: 600px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin-top: -10px;
+        }
+
+        .tr a {
+            position: relative;
+            left: 1332px;
+        }
+
+        .review-card,
+        .testimonial {
+            background: whitesmoke;
+            color: black;
+            padding: 15px;
+            margin: 0px;
+            border-radius: 25px;
+            display: inline-block;
+            text-align: left;
+            align-content: center;
+            height: 190px;
+            width: 655px;
+        }
+
+
+        /* =========================
+              REVIEWS SECTION
+        ========================= */
+
+        .review {
+            width: min(1200px, calc(100% - 40px));
+            margin: 80px auto;
+
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 20px;
+
+            background: transparent;
+            box-sizing: border-box;
+        }
+
+        .reviews {
+            grid-column: 1 / -1;
+            width: 100%;
+        }
+
+        .reviews h2 {
+            margin: 0 0 30px;
+
+            font-size: clamp(30px, 4vw, 40px);
+            line-height: 1.2;
+
+            text-align: left;
+        }
+
+        .container6,
+        .container7,
+        .container8 {
+            width: 100%;
+            min-width: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        .review-card {
+            width: 100%;
+            min-height: 190px;
+            height: 100%;
+
+            padding: 25px;
+
+            background: whitesmoke;
+            color: black;
+
+            border-radius: 25px;
+
+            box-sizing: border-box;
+        }
+
+        .review-card p {
+            margin: 0;
+
+            color: #7b7777;
+            line-height: 1.6;
+
+            text-align: left;
+        }
+
+        .first-raw {
+            margin: auto;
+        }
+
+        /* =========================
+   CONTACT + MESSAGE SECTION
+========================= */
+
+        .contact-form,
+        .message-form {
+            display: inline-flex;
+            vertical-align: top;
+
+            width: 500px;
+            height: 425px;
+
+            margin: 20px 10px;
+            padding: 30px 35px;
+
+            background: white;
+            border-radius: 12px;
+
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+
+            box-sizing: border-box;
+
+            position: relative;
+            left: auto;
+            top: 0;
+        }
+
+
+        /* =========================
+   CONTACT FORM
+========================= */
+
+        .contact-form {
+            flex-direction: column;
+            margin-left: calc(50% - 510px);
+            margin-right: 10px;
+        }
+
+        .contact-form h2 {
+            position: static;
+
+            margin: 0 0 35px;
+
+            text-align: center;
+            font-size: 32px;
+        }
+
+        .contact-form p {
+            display: grid;
+            grid-template-columns: 50px 70px 1fr;
+            align-items: center;
+            gap: 10px;
+
+            margin: 12px 0;
+
+            position: static;
+        }
+
+        .contact-form p img {
+            width: 45px;
+            height: 45px;
+
+            object-fit: contain;
+
+            position: static;
+        }
+
+        .contact-form p p1 {
+            position: static;
+
+            font-size: 17px;
+            font-weight: 500;
+
+            white-space: nowrap;
+        }
+
+        .contact-form p span {
+            display: block;
+
+            position: static;
+
+            font-size: 16px;
+            color: #333;
+
+            line-height: 1.4;
+
+            word-break: break-word;
+        }
+
+
+        /* =========================
+   MESSAGE FORM
+========================= */
+
+        .message-form {
+            flex-direction: column;
+            margin-left: 10px;
+        }
+
+        .message-form h2 {
+            margin: 0 0 35px;
+
+            text-align: center;
+            font-size: 32px;
+        }
+
+        .message-form form {
+            width: 100%;
+            height: auto;
+
+            display: flex;
+            flex-direction: column;
+
+            flex: 1;
+        }
+
+        .message-form input,
+        .message-form textarea {
+            display: block;
+
+            width: 100%;
+
+            margin: 0 0 12px;
+            padding: 12px 14px;
+
+            border-radius: 6px;
+            border: 1px solid #ccc;
+
+            font-family: inherit;
+            font-size: 14px;
+
+            box-sizing: border-box;
+
+            outline: none;
+
+            transition: border-color 0.2s ease,
+                box-shadow 0.2s ease;
+        }
+
+        .message-form input {
+            height: 40px;
+        }
+
+        .message-form textarea {
+            height: 95px;
+            min-height: 95px;
+            max-height: 95px;
+
+            resize: none;
+        }
+
+        .message-form input:focus,
+        .message-form textarea:focus {
+            border-color: #2a66f2;
+
+            box-shadow: 0 0 0 3px rgba(42, 102, 242, 0.1);
+        }
+
+        .message-form button {
+            align-self: flex-end;
+
+            width: 115px;
+            height: 40px;
+
+            margin-top: auto;
+
+            padding: 0;
+
+            background: #007bff;
+            color: white;
+
+            border: none;
+            border-radius: 5px;
+
+            cursor: pointer;
+
+            font-size: 14px;
+
+            position: static;
+
+            transition: background 0.2s ease,
+                transform 0.2s ease;
+        }
+
+        .message-form button:hover {
+            background: #0056b3;
+            transform: translateY(-1px);
+        }
+
+        .footer {
+            text-align: center;
+            background: #fff;
+            padding: 40px 20px;
+            border-top: 1px solid #ccc;
+        }
+
+        .contact-card {
+            width: 350px;
+            padding: 40px 35px;
+            border-radius: 25px;
+            color: #fff;
+            background: linear-gradient(135deg, #0a3d91, #14b8c5);
+            position: relative;
+        }
+
+        .contact-card h2 {
+            font-size: 32px;
+            margin-bottom: 35px;
+        }
+
+        .info {
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+
+        .icon {
+            width: 48px;
+            height: 48px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            font-size: 18px;
+        }
+
+        .text h4 {
+            font-size: 18px;
+            margin-bottom: 4px;
+        }
+
+        .text p {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        .social {
+            position: absolute;
+            bottom: 25px;
+            left: 35px;
+            display: flex;
+            gap: 15px;
+        }
+
+        .social span {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .social span:hover {
+            background: rgba(255, 255, 255, 0.35);
+        }
+
+
+        .logo-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .logo-section img {
+            left: 0px;
+        }
+
+        .logo-section h2 {
+            position: relative;
+            right: 10px;
+        }
+
+        .logo {
+            width: 40px;
+            height: 40px;
+        }
+
+        .footer-nav {
+            margin-bottom: 20px;
+        }
+
+        .footer-nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #000;
+            font-weight: 500;
+        }
+
+        .store-buttons {
+            position: relative;
+        }
+
+        .store-buttons img {
+            height: 40px;
+            margin: 10px;
+        }
+
+        .social-icons {
+            margin: 20px 0;
+            position: relative;
+        }
+
+        .social-icons a img {
+            width: 35px;
+            height: 30px;
+            margin: 0 10px;
+        }
+
+        .footer-bottom {
+            font-size: 14px;
+            color: #666;
+        }
+
+        .footer-bottom a {
+            text-decoration: none;
+            color: #666;
+            margin: 0 5px;
+        }
+
+        .h1 {
+            flex-direction: column;
+        }
+
+        .contact-form p {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin: 15px;
+        }
+
+        .contact-form p span {
+            position: static !important;
+            left: 0 !important;
+            top: 0 !important;
+        }
+
+        .contact-form p p1 {
+            position: static !important;
+            left: 0 !important;
+            bottom: 0 !important;
+        }
+
+        /* =========================================================
+   RESPONSIVE DESIGN
+   Desktop CSS above this section remains unchanged.
+========================================================= */
+
+
+        /* =========================================================
+   TABLET / SMALL LAPTOP
+   1024px and below
+========================================================= */
+
+        @media (max-width: 1024px) {
+
+            /* =========================
+       GLOBAL
+    ========================= */
+
+            header,
+            .hero,
+            .features,
+            .who-needs,
+            .review {
+                width: calc(100% - 40px);
+            }
+
+
+            /* =========================
+       HEADER / NAVBAR
+    ========================= */
+
+            header {
+                margin: 25px auto 15px;
+                padding: 12px 20px;
+                gap: 15px;
+            }
+
+            .img-icon {
+                width: 36px;
+                height: 36px;
+            }
+
+            .img-logo {
+                font-size: 21px;
+            }
+
+            nav ul {
+                gap: 4px;
+            }
+
+            nav ul li {
+                margin: 0 5px;
+            }
+
+            nav ul li a {
+                padding: 7px 8px;
+                font-size: 13px;
+            }
+
+            .login-btn {
+                padding: 9px 15px;
+                font-size: 13px;
+            }
+
+
+            /* =========================
+       HERO
+    ========================= */
+
+            .hero {
+                gap: 35px;
+                padding: 45px 0;
+            }
+
+            .hero-text h1 {
+                font-size: clamp(34px, 5vw, 48px);
+            }
+
+            .hero-text p {
+                font-size: 17px;
+            }
+
+
+            /* =========================
+       TOOLS / LOGOS
+    ========================= */
+
+            .logo-strip img {
+                height: 30px;
+                margin: 0 18px;
+            }
+
+
+            /* =========================
+       POWER SECTION
+    ========================= */
+
+            .power {
+                width: calc(100% - 40px);
+                margin: 55px auto 30px;
+            }
+
+            .power h1 {
+                font-size: 34px;
+            }
+
+            .power p {
+                font-size: 18px;
+            }
+
+
+            /* =========================
+       FEATURES
+    ========================= */
+
+            .features {
+                padding: 25px;
+            }
+
+            .first-raw {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 15px;
+            }
+
+            .feature-card {
+                padding: 20px;
+            }
+
+            .feature-card img {
+                width: 50px;
+                height: 50px;
+            }
+
+            .feature-card h2 {
+                font-size: 17px;
+            }
+
+            .feature-card p {
+                font-size: 14px;
+            }
+
+
+            /* =========================
+       WHO NEEDS
+    ========================= */
+
+            .who-needs {
+                grid-template-columns: 1fr 1fr;
+                gap: 35px;
+                margin: 60px auto;
+            }
+
+            .who-needs h2 {
+                font-size: 32px;
+            }
+
+            .who-needs p {
+                font-size: 17px;
+            }
+
+            .bank-card {
+                padding: 18px;
+            }
+
+
+            /* =========================
+       TRUST SECTION
+    ========================= */
+
+            .trust {
+                padding: 20px 35px;
+            }
+
+            .trust-card {
+                width: min(100%, 600px);
+                max-width: 100%;
+            }
+
+            .container4,
+            .container5 {
+                margin-right: 0;
+            }
+
+            .image3 img {
+                width: min(100%, 500px);
+                height: auto;
+            }
+
+            .tr a {
+                left: 0;
+            }
+
+
+            /* =========================
+       REVIEWS
+    ========================= */
+
+            .review {
+                gap: 15px;
+                margin: 60px auto;
+            }
+
+            .review-card {
+                min-height: 190px;
+                height: 100%;
+                padding: 20px;
+            }
+
+            .reviews h2 {
+                font-size: 32px;
+            }
+
+
+            /* =========================
+       CONTACT + MESSAGE
+    ========================= */
+
+            .contact-form,
+            .message-form {
+                width: calc(50% - 25px) !important;
+                max-width: 500px;
+                height: 400px !important;
+
+                position: static !important;
+
+                margin: 20px 10px !important;
+                left: auto !important;
+                right: auto !important;
+                top: auto !important;
+
+                vertical-align: top;
+            }
+
+            .contact-form h2,
+            .message-form h2 {
+                position: static !important;
+                margin: 0 0 30px;
+                text-align: center;
+            }
+
+            .contact-form p {
+                position: static !important;
+                margin: 15px 0;
+            }
+
+            .contact-form p span,
+            .contact-form p p1 {
+                position: static !important;
+            }
+
+            .message-form form {
+                height: auto;
+            }
+
+            .message-form input,
+            .message-form textarea {
+                width: 100%;
+            }
+
+            .message-form button {
+                position: static !important;
+                left: auto !important;
+            }
+
+
+            /* =========================
+       FOOTER
+    ========================= */
+
+            .footer {
+                padding: 35px 20px;
+            }
+
+        }
+
+
+        /* =========================================================
+   TABLET / MOBILE
+   768px and below
+========================================================= */
+
+        @media (max-width: 768px) {
+
+            /* =========================
+       GLOBAL
+    ========================= */
+
+            body {
+                overflow-x: hidden;
+            }
+
+            header,
+            .hero,
+            .features,
+            .who-needs,
+            .review {
+                width: calc(100% - 30px);
+            }
+
+
+            /* =========================
+       NAVBAR
+    ========================= */
+
+            header {
+                margin: 15px auto;
+                padding: 10px 15px !important;
+
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+
+                gap: 10px;
+            }
+
+            .brand {
+                flex-shrink: 0;
+            }
+
+            .img-icon {
+                width: 32px;
+                height: 32px;
+            }
+
+            .img-logo {
+                font-size: 19px;
+            }
+
+            .hamburger {
+                display: block !important;
+
+                font-size: 28px;
+
+                background: none;
+                border: none;
+
+                cursor: pointer;
+
+                margin-left: auto;
+            }
+
+            .button ul {
+                display: none;
+
+                flex-direction: column;
+                align-items: center;
+
+                width: 100%;
+
+                padding: 10px 0;
+                margin: 0;
+
+                gap: 5px;
+            }
+
+            .button ul.show {
+                display: flex !important;
+            }
+
+            .button ul li {
+                width: 100%;
+                margin: 0;
+                text-align: center;
+            }
+
+            .button ul li a {
+                width: 100%;
+                padding: 10px;
+            }
+
+            .login-btn {
+                display: block;
+                margin: 5px auto;
+            }
+
+
+            /* =========================
+       HERO
+    ========================= */
+
+            .hero {
+                flex-direction: column;
+
+                gap: 30px;
+                padding: 35px 15px;
+
+                text-align: center;
+            }
+
+            .hero-text {
+                width: 100%;
+                max-width: 100%;
+                text-align: center;
+            }
+
+            .hero-text h1 {
+                font-size: clamp(30px, 7vw, 42px);
+            }
+
+            .hero-text p {
+                font-size: 16px;
+                line-height: 1.5;
+            }
+
+            .hero-image {
+                width: 100%;
+            }
+
+            .hero-image img {
+                width: 100%;
+                max-width: 600px;
+                margin: 0 auto;
+            }
+
+
+            /* =========================
+       TOOLS / LOGOS
+    ========================= */
+
+            .logo-container {
+                padding: 15px 0;
+            }
+
+            .logo-strip img {
+                height: 28px;
+                margin: 0 15px;
+            }
+
+
+            /* =========================
+       POWER
+    ========================= */
+
+            .power {
+                width: calc(100% - 30px);
+                margin: 45px auto 25px;
+            }
+
+            .power h1 {
+                font-size: clamp(26px, 6vw, 34px);
+            }
+
+            .power p {
+                font-size: 16px;
+                line-height: 1.5;
+            }
+
+
+            /* =========================
+       FEATURES
+    ========================= */
+
+            .features {
+                padding: 20px;
+                margin: 30px auto;
+            }
+
+            .first-raw {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 12px;
+            }
+
+            .container1,
+            .container2,
+            .container3 {
+                display: contents;
+            }
+
+            .feature-card {
+                width: 100%;
+                min-width: 0;
+                height: auto;
+
+                padding: 16px;
+
+                margin: 0;
+            }
+
+            .feature-card img {
+                width: 45px;
+                height: 45px;
+
+                margin-bottom: 10px;
+            }
+
+            .feature-card h2 {
+                font-size: 15px;
+                line-height: 1.25;
+            }
+
+            .feature-card p {
+                font-size: 12px;
+                line-height: 1.45;
+            }
+
+
+            /* =========================
+       WHO NEEDS
+    ========================= */
+
+            .who-needs {
+                grid-template-columns: 1fr;
+
+                gap: 25px;
+
+                margin: 50px auto;
+            }
+
+            .image2 {
+                width: 100%;
+            }
+
+            .image2 img {
+                width: 100%;
+                height: auto;
+
+                padding: 0;
+                margin: 0;
+            }
+
+            .who-needs>div:last-child {
+                width: 100%;
+            }
+
+            .who-needs h2 {
+                font-size: clamp(26px, 6vw, 34px);
+                text-align: center;
+            }
+
+            .who-needs p {
+                font-size: 16px;
+                line-height: 1.5;
+            }
+
+            .bank-card {
+                width: 100%;
+                margin: 20px 0;
+            }
+
+            .btn1,
+            .btn2 {
+                width: 38px;
+                height: 38px;
+            }
+
+
+            /* =========================
+       CONTACT STRIP
+    ========================= */
+
+            .contact-container {
+                height: auto;
+                overflow: hidden;
+
+                padding: 12px 10px;
+            }
+
+            .contact-strip {
+                animation: none;
+                display: block;
+
+                white-space: normal;
+
+                text-align: center;
+            }
+
+            .contact-strip img {
+                height: 25px;
+                margin: 5px 10px;
+            }
+
+
+            /* =========================
+       TRUST SECTION
+    ========================= */
+
+            .tr {
+                padding: 20px 15px;
+
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .tr h2 {
+                position: static !important;
+
+                margin: 0 0 10px;
+
+                text-align: center;
+
+                font-size: clamp(24px, 6vw, 32px);
+            }
+
+            .tr a {
+                position: static !important;
+
+                display: inline-block;
+
+                margin: 10px 0;
+            }
+
+            .trust {
+                display: flex;
+                flex-direction: column;
+
+                align-items: center;
+
+                padding: 20px 15px;
+            }
+
+            .container4,
+            .container5 {
+                width: 100%;
+
+                margin: 0;
+
+                display: flex;
+                flex-direction: column;
+
+                align-items: center;
+            }
+
+            .trust-card {
+                width: min(100%, 620px);
+                max-width: 100%;
+
+                height: auto;
+
+                margin: 10px auto;
+
+                box-sizing: border-box;
+            }
+
+            .image3 {
+                width: 100%;
+
+                display: flex;
+                justify-content: center;
+            }
+
+            .image3 img {
+                width: min(100%, 600px);
+                height: auto;
+
+                margin: 10px auto;
+            }
+
+
+            /* =========================
+       REVIEWS
+    ========================= */
+
+            .review {
+                width: calc(100% - 30px);
+
+                margin: 50px auto;
+
+                display: grid;
+
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+
+                gap: 15px;
+
+                background: transparent;
+            }
+
+            .reviews {
+                grid-column: 1 / -1;
+                width: 100%;
+            }
+
+            .reviews h2 {
+                margin: 0 0 20px;
+
+                font-size: clamp(25px, 6vw, 32px);
+
+                text-align: center;
+            }
+
+            .container6,
+            .container7,
+            .container8 {
+                width: 100%;
+                min-width: 0;
+                margin: 0;
+
+                display: flex;
+            }
+
+            .review-card {
+                width: 100%;
+                height: 100%;
+                min-height: 180px;
+
+                margin: 0;
+                padding: 18px;
+            }
+
+            .review-card p {
+                font-size: 14px;
+                line-height: 1.5;
+            }
+
+
+            /* =========================
+       CONTACT + MESSAGE
+    ========================= */
+
+            .contact-form,
+            .message-form {
+                width: calc(100% - 30px) !important;
+                max-width: 500px;
+
+                height: auto !important;
+                min-height: 400px;
+
+                display: flex !important;
+                flex-direction: column;
+
+                position: static !important;
+
+                margin: 15px auto !important;
+
+                left: auto !important;
+                right: auto !important;
+                top: auto !important;
+
+                padding: 25px !important;
+
+                box-sizing: border-box;
+            }
+
+            .contact-form h2,
+            .message-form h2 {
+                position: static !important;
+
+                margin: 0 0 30px !important;
+
+                text-align: center;
+
+                font-size: 28px;
+            }
+
+            .contact-form p {
+                display: grid;
+
+                grid-template-columns: 45px 65px 1fr;
+
+                align-items: center;
+
+                gap: 8px;
+
+                margin: 12px 0 !important;
+
+                position: static !important;
+            }
+
+            .contact-form p img {
+                width: 40px;
+                height: 40px;
+
+                position: static !important;
+            }
+
+            .contact-form p p1 {
+                position: static !important;
+
+                font-size: 15px;
+            }
+
+            .contact-form p span {
+                position: static !important;
+
+                font-size: 14px;
+
+                line-height: 1.4;
+            }
+
+            .message-form form {
+                width: 100%;
+                height: auto;
+
+                display: flex;
+                flex-direction: column;
+
+                flex: 1;
+            }
+
+            .message-form input,
+            .message-form textarea {
+                width: 100% !important;
+
+                margin: 0 0 12px;
+
+                box-sizing: border-box;
+            }
+
+            .message-form textarea {
+                height: 95px;
+
+                min-height: 95px;
+                max-height: 95px;
+
+                resize: none;
+            }
+
+            .message-form button {
+                width: 115px !important;
+                height: 40px;
+
+                align-self: flex-end;
+
+                margin-top: auto;
+
+                position: static !important;
+                left: auto !important;
+
+                padding: 0;
+            }
+
+
+            /* =========================
+       FOOTER
+    ========================= */
+
+            .footer {
+                padding: 30px 15px;
+            }
+
+            .logo-section {
+                flex-direction: column;
+            }
+
+            .footer-nav {
+                display: flex;
+
+                flex-wrap: wrap;
+
+                justify-content: center;
+
+                gap: 5px;
+            }
+
+            .footer-nav a {
+                display: inline-block;
+
+                margin: 5px 8px;
+            }
+
+            .store-buttons {
+                position: static;
+            }
+
+            .store-buttons img {
+                height: 32px;
+
+                margin: 5px;
+            }
+
+            .social-icons {
+                margin: 15px 0;
+            }
+
+            .social-icons a img {
+                width: 30px;
+                height: 28px;
+
+                margin: 0 5px;
+            }
+
+            .footer-bottom {
+                font-size: 12px;
+                line-height: 1.5;
+            }
+
+        }
+
+
+        /* =========================================================
+   SMALL MOBILE
+   480px and below
+========================================================= */
+
+        @media (max-width: 480px) {
+
+            /* =========================
+       GLOBAL
+    ========================= */
+
+            header,
+            .hero,
+            .features,
+            .who-needs,
+            .review {
+                width: calc(100% - 20px);
+            }
+
+
+            /* =========================
+       NAVBAR
+    ========================= */
+
+            header {
+                padding: 8px 12px !important;
+                border-radius: 14px;
+            }
+
+            .img-icon {
+                width: 28px;
+                height: 28px;
+            }
+
+            .img-logo {
+                font-size: 17px;
+            }
+
+            .hamburger {
+                font-size: 25px;
+            }
+
+
+            /* =========================
+       HERO
+    ========================= */
+
+            .hero {
+                padding: 25px 10px;
+                gap: 20px;
+            }
+
+            .hero-text h1 {
+                font-size: 30px;
+            }
+
+            .hero-text p {
+                font-size: 14px;
+            }
+
+            .cta-btn {
+                padding: 10px 16px;
+                font-size: 14px;
+            }
+
+
+            /* =========================
+       TOOLS
+    ========================= */
+
+            .logo-strip img {
+                height: 24px;
+                margin: 0 10px;
+            }
+
+
+            /* =========================
+       POWER
+    ========================= */
+
+            .power {
+                width: calc(100% - 20px);
+                margin: 35px auto 20px;
+            }
+
+            .power h1 {
+                font-size: 25px;
+            }
+
+            .power p {
+                font-size: 14px;
+            }
+
+
+            /* =========================
+       FEATURES
+    ========================= */
+
+            .features {
+                padding: 12px;
+                border-radius: 15px;
+            }
+
+            .first-raw {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+
+            .feature-card {
+                padding: 15px;
+            }
+
+            .feature-card img {
+                width: 40px;
+                height: 40px;
+            }
+
+            .feature-card h2 {
+                font-size: 15px;
+            }
+
+            .feature-card p {
+                font-size: 12px;
+            }
+
+
+            /* =========================
+       WHO NEEDS
+    ========================= */
+
+            .who-needs {
+                width: calc(100% - 20px);
+
+                margin: 40px auto;
+                gap: 20px;
+            }
+
+            .who-needs h2 {
+                font-size: 26px;
+            }
+
+            .who-needs p {
+                font-size: 14px;
+            }
+
+            .bank-card {
+                padding: 15px;
+            }
+
+
+            /* =========================
+       TRUST
+    ========================= */
+
+            .trust {
+                padding: 15px 10px;
+            }
+
+            .trust-card {
+                padding: 15px;
+
+                border-radius: 20px;
+            }
+
+            .trust-card h2 {
+                font-size: 18px;
+            }
+
+            .trust-card p {
+                font-size: 13px;
+            }
+
+            .image3 img {
+                border-radius: 12px;
+            }
+
+
+            /* =========================
+       REVIEWS
+    ========================= */
+
+            .review {
+                width: calc(100% - 20px);
+
+                grid-template-columns: 1fr;
+
+                gap: 12px;
+
+                margin: 40px auto;
+            }
+
+            .reviews h2 {
+                font-size: 25px;
+                text-align: center;
+            }
+
+            .reviews {
+                grid-column: 1;
+            }
+
+            .container6,
+            .container7,
+            .container8 {
+                width: 100%;
+            }
+
+            .review-card {
+                min-height: 170px;
+                padding: 16px;
+            }
+
+
+            /* =========================
+       CONTACT + MESSAGE
+    ========================= */
+
+            .contact-form,
+            .message-form {
+                width: calc(100% - 20px) !important;
+
+                min-height: 380px;
+
+                padding: 20px !important;
+
+                border-radius: 12px;
+            }
+
+            .contact-form h2,
+            .message-form h2 {
+                font-size: 25px;
+
+                margin-bottom: 25px !important;
+            }
+
+            .contact-form p {
+                grid-template-columns: 40px 55px 1fr;
+
+                gap: 6px;
+            }
+
+            .contact-form p img {
+                width: 35px;
+                height: 35px;
+            }
+
+            .contact-form p p1 {
+                font-size: 14px;
+            }
+
+            .contact-form p span {
+                font-size: 13px;
+            }
+
+            .message-form input {
+                height: 38px;
+            }
+
+            .message-form textarea {
+                height: 90px;
+
+                min-height: 90px;
+                max-height: 90px;
+            }
+
+            .message-form button {
+                width: 110px !important;
+                height: 38px;
+            }
+
+
+            /* =========================
+       FOOTER
+    ========================= */
+
+            .footer {
+                padding: 25px 10px;
+            }
+
+            .footer-nav a {
+                font-size: 13px;
+                margin: 4px 6px;
+            }
+
+            .store-buttons img {
+                height: 30px;
+            }
+
+            .footer-bottom {
+                font-size: 11px;
+            }
+
+        }
+
+
+        /* =========================================================
+   VERY SMALL PHONES
+   375px and below
+========================================================= */
+
+        @media (max-width: 375px) {
+
+            .hero-text h1 {
+                font-size: 27px;
+            }
+
+            .power h1 {
+                font-size: 23px;
+            }
+
+            .feature-card h2 {
+                font-size: 14px;
+            }
+
+            .feature-card p {
+                font-size: 11px;
+            }
+
+            .trust-card h2 {
+                font-size: 17px;
+            }
+
+            .review-card {
+                min-height: 160px;
+            }
+
+            .contact-form,
+            .message-form {
+                width: calc(100% - 10px) !important;
+                padding: 17px !important;
+            }
+
+            .contact-form p {
+                grid-template-columns: 35px 50px 1fr;
+            }
+
+            .contact-form p span {
+                font-size: 12px;
+            }
+
+            .message-form button {
+                width: 105px !important;
+            }
+
+        }
+    </style>
+
+    <script>
+        function toggleMenu() {
+            const nav = document.querySelector('.button ul');
+            nav.classList.toggle('show');
+        }
+    </script>
+
+</head>
+
+<body>
+    <header>
+        <div class="brand">
+            <img src="https://cdn-icons-png.flaticon.com/512/16787/16787080.png" class="img-icon" alt="SignFlexi logo">
+            <div class="img-logo">SignFlexi</div>
+        </div>
+
+        <button class="hamburger" onclick="toggleMenu()" aria-label="Toggle navigation">
+            ☰
+        </button>
+
+        <nav class="button">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Why Choose Us</a></li>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Partners</a></li>
+                <li><a href="#">Resources</a></li>
+            </ul>
+        </nav>
+
+        <a href="#" class="login-btn">Log In &#8599;</a>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Streamline Your Document Workflow with <span>SignFlexi</span></h1>
+            <p>From Digital Signatures to Seamless Document Signing- Compliant, Secure, and Built for India.</p>
+            <a href="#" class="cta-btn">Contact Us &#8599;</a>
+        </div>
+        <div class="hero-image">
+            <img src="https://img.freepik.com/premium-photo/she-keeps-tabs-everything-cropped-shot-young-businesswoman-working-her-office_590464-48203.jpg?w=1060"
+                alt="Woman using tablet">
+        </div>
+    </section>
+
+    <!-- Tools Section -->
+    <section class="tools">
+        <h2>Tools We Work With</h2>
+
+        <div class="logo-container">
+            <div class="logo-strip">
+                <div class="tool-logos">
+                    <!-- Repeat logos for smooth loop -->
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCmXtLPjBXMhNAvJzFKHHHYA3cZ1Lw01mK4w&s"
+                        alt="Linux">
+                    <img src="https://logospng.org/wp-content/uploads/macos.png" alt="macOS">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/SAP_2011_logo.svg/1200px-SAP_2011_logo.svg.png"
+                        alt="SAP">
+                    <img src="https://solnetindia.com/wp-content/uploads/2024/10/tally.png" alt="Tally">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/f/fb/Google_Drive_-_New_Logo.png"
+                        alt="Google Drive">
+                    <img src="https://www.cdnlogo.com/logos/o/52/onedrive.svg" alt="OneDrive">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/23/Dropbox_Logo_01.svg" alt="Dropbox">
+
+                    <!-- Repeat again -->
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCmXtLPjBXMhNAvJzFKHHHYA3cZ1Lw01mK4w&s"
+                        alt="Linux">
+                    <img src="https://logospng.org/wp-content/uploads/macos.png" alt="macOS">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/SAP_2011_logo.svg/1200px-SAP_2011_logo.svg.png"
+                        alt="SAP">
+                    <img src="https://solnetindia.com/wp-content/uploads/2024/10/tally.png" alt="Tally">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/f/fb/Google_Drive_-_New_Logo.png"
+                        alt="Google Drive">
+                    <img src="https://www.cdnlogo.com/logos/o/52/onedrive.svg" alt="OneDrive">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/23/Dropbox_Logo_01.svg" alt="Dropbox">
+
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCmXtLPjBXMhNAvJzFKHHHYA3cZ1Lw01mK4w&s"
+                        alt="Linux">
+                    <img src="https://logospng.org/wp-content/uploads/macos.png" alt="macOS">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/SAP_2011_logo.svg/1200px-SAP_2011_logo.svg.png"
+                        alt="SAP">
+                    <img src="https://solnetindia.com/wp-content/uploads/2024/10/tally.png" alt="Tally">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/f/fb/Google_Drive_-_New_Logo.png"
+                        alt="Google Drive">
+                    <img src="https://www.cdnlogo.com/logos/o/52/onedrive.svg" alt="OneDrive">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/23/Dropbox_Logo_01.svg" alt="Dropbox">
+
+                </div>
+    </section>
+
+    <section class="power">
+        <h1>Powerful Features to Simplify <br> Signing and Compliance</h1>
+
+        <p>
+            Our platform offers robust tools that streamline the signing process,
+            ensuring quick and secure document completion with built-in compliance
+            features. It simplifies legal adherence, reducing the risk of errors
+            and delays.
+        </p>
+    </section>
+
+    <section class="features">
+        <div class="first-raw">
+            <div class="container1">
+                <div class="feature-card"><img src="img1.jpeg" alt="img">
+                    <h2>Ready-Made Integrations</h2>
+                    <p>Easily integrate our solution with popular enterprise
+                        platforms, ensuring seamless workflows across your
+                        existing tools.</p>
+                </div>
+                <div class="feature-card"><img src="img2.jpeg" alt="img">
+                    <h2>Digital Certificate Issuance</h2>
+                    <p>class 3 and organizational digital certificates for signing. encryption and authentication.</p>
+                </div>
+                <div class="feature-card"><img src="img3.jpeg" alt="img">
+                    <h2>Document Signing Workflow</h2>
+                    <p>Easy-to-use document workflows upload, sign, store, and track signed documents in a few clicks.
+                    </p>
+                </div>
+            </div>
+            <div class="container2">
+                <div class="feature-card"><img src="img4.jpeg" alt="img">
+                    <h2>Compliance and Security</h2>
+                    <p>Legal compliance for India (IT Act, CCA) and global standards (eIDAS, ESIGN) Data encryption,
+                        tamper-proof logs, and secure storage of certificates.</p>
+                </div>
+                <div class="feature-card"><img src="img5.jpeg" alt="img">
+                    <h2>Role-Based Access Controls (RBAC)</h2>
+                    <p>Manage users, roles, and permissions to ensure that sensitive workflows are controlled
+                        efficiently.
+                    </p>
+                </div>
+                <div class="feature-card"><img src="img6.jpeg" alt="img">
+                    <h2>Audit Trails & Compliance Reporting</h2>
+                    <p>Automatic logging for signing events and user actions for tracking and compliance audits.</p>
+                </div>
+            </div>
+            <div class="container3">
+                <div class="feature-card"><img src="img7.jpeg" alt="img">
+                    <h2>Multi-Format & Multi-Signature Support</h2>
+                    <p>Supports signing across documents in popular formates such as PDFs, DOCs, and images. Enable
+                        multiple
+                        signatories on the same document.</p>
+                </div>
+                <div class="feature-card"><img src="img8.jpeg" alt="img">
+                    <h2>Bulk Signing</h2>
+                    <p>Sign multiple documents at once, saving time for businesses with high document volumes.</p>
+                </div>
+                <div class="feature-card"><img src="img9.jpeg" alt="img">
+                    <h2>Flexible APIs and SDKs</h2>
+                    <p>Provide advanced developer tools for embedding signing compatibilities into your custom
+                        applications.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="who-needs">
+        <div class="image2">
+            <img src="https://img.freepik.com/free-photo/online-statistics_1098-15646.jpg?t=st=1744087574~exp=1744091174~hmac=b6f9c6f8b0f9f736feeb2f953d00811c2bade1acd29e56b70b92c4f85d602c52&w=1060"
+                alt="image2">
+        </div>
+        <div>
+            <h2>Who Needs Our Solution?</h2>
+            <p>Our digital signing solutions are ideal for businesses, organization, and individuals looking to
+                streamline
+                their document management processes while ensuring security and compliance.</p>
+
+            <div class="bank-card">
+                <h5>Banks and Financial Services</h5>
+                <p>Easily sign loan documents, contracts, and approvels while staying 100% compliment.</p>
+            </div>
+            <a href="#" class="btn1">
+                <div>
+                    < </div>
+            </a>
+            <a href="#" class="btn2">
+                <div> > </div>
+            </a>
+            <a href="#" class="cta-btn">Contact Us &#8599;</a>
+        </div>
+    </section>
+
+    <section class="contact">
+        <div class="contact-container">
+            <div class="contact-strip">
+                <div class="contact-logos">
+                    <nav>
+                        <ul>
+                            <li><a href="#">+91 6587127849</a></li>
+                            <li><a href="#">Sign Flexi@gmail.com</a></li>
+                            <li><a href="#">21, Arihant Nagar, Bengluru, 654 982</a></li>
+                            <li><a href="#">+91 6587127849</a></li>
+                            <li><a href="#">Sign Flexi@gmail.com</a></li>
+                            <li><a href="#">21, Arihant Nagar, Bengluru, 654 982</a></li>
+                            <li><a href="#">+91 6587127849</a></li>
+                            <li><a href="#">Sign Flexi@gmail.com</a></li>
+                            <li><a href="#">21, Arihant Nagar, Bengluru, 654 982</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="tr">
+        <h2>Why Businesses Trust Our<br> Digital Signing Solution</h2><a href="#" class="cta-btn">Contact Us</a>
+    </div>
+    <section class="trust">
+        <div class="container4">
+            <div class="trust-card"><img src="img10.jpeg" alt="">
+                <h2>Compliant with Indian Regulations</h2>
+                <p>100% legal and secure-complaying with the Indian IT Act and CCA regulations for digital signatures.
+                </p>
+            </div>
+            <div class="trust-card"><img src="img11.jpeg" alt="">
+                <h2>End-to-End Workflow Support</h2>
+                <p>From creating documents to securely signing, and managing evrithing is stremlined.</p>
+            </div>
+        </div>
+        <div class="container5">
+            <div class="trust-card"><img src="img12.jpeg" alt="">
+                <h2>Quick Certificate Issuance</h2>
+                <p>Purchase and recieve digital signature certificates quickly with simple onboarding.</p>
+            </div>
+            <div class="trust-card"><img src="img13.jpeg" alt="">
+                <h2>Dedicated Client Support</h2>
+                <p>onboarding made easy with our expert guidance and 1:1 personalized support.</p>
+            </div>
+        </div>
+        <div class="image3">
+            <img src="https://img.freepik.com/premium-photo/serious-middle-aged-woman-headphones-with-digital-tablet-home-couch_116407-18226.jpg?w=1060"
+                alt="image3">
+        </div>
+    </section>
+
+    <section class="review">
+        <div class="reviews">
+            <h2>What Our Clients Say About Us</h2>
+        </div>
+        <div class="container6">
+            <div class="review-card">
+                <p>"As a small business owner, I was always overwhelmed by the amount of paperwork that required
+                    signatures.
+                    Since adopting this digital signing solution, we've saved countless hours. It's fast, secure, and
+                    user-friendly. I can now sign documents on the go, and my clients appreciate the ease of use too!"
+                </p>
+            </div>
+        </div>
+        <div class="container7">
+            <div class="review-card">
+                <p>"We've been using this service for several months now, and it's been a game changer for our legal
+                    practice. The security features are top-notch, and the ability to quickly finalize contracts with
+                    clients-no matter where they are has significantly boosted our productivity."</p>
+            </div>
+        </div>
+        <div class="container8">
+            <div class="review-card">
+                <p>"The digital signing solution has completed our workflow. No more printing, scanning contacts! it's
+                    incedibly efficient, and the knowing our documents are securely sign binding is priceless."</p>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <section class="contact-form">
+        <h2>Contact Us</h2>
+        <p><img src="https://cdn-icons-png.flaticon.com/512/455/455604.png">
+            <p1>Call</p1><span> +91 6587127849</span>
+        </p>
+        <p><img src="https://freepngimg.com/save/webp/64774-computer-gmail-email-icons-png-image-high-quality">
+            <p1>Email</p1><span> SignFlexi@example.com</span>
+        </p>
+        <p><img
+                src="https://toppng.com/uploads/preview/address-mark-comments-address-circle-ico-115630510312zwtnnqcrm.png">
+            <p1>Address</p1><span> 21,Arihant Nagar,Bengaluru,654 982</span>
+        </p>
+        </pre>
+    </section>
+
+    <section class="message-form">
+        <h2>Send Us a Message</h2>
+        <form>
+            <input type="text" name="fullName" placeholder="Full Name" required>
+
+            <input type="email" name="email" placeholder="Email Address" required>
+
+            <input type="text" name="company" placeholder="Company Name">
+
+            <textarea Message placeholder="Write Here" maxlength="500"></textarea>
+            <button type="submit">Contact Us</button>
+        </form>
+    </section>
+
+    <footer class="footer">
+        <div class="logo-section">
+            <img src="https://cdn-icons-png.flaticon.com/512/16787/16787080.png" class="icon">
+            <!-- <img src="logo-placeholder.png" alt="SignFlexi Logo" class="logo"> -->
+            <h2>SignFlexi</h2>
+        </div>
+        <nav class="footer-nav">
+            <a href="#">Features</a>
+            <a href="#">Pricing</a>
+            <a href="#">Resources</a>
+            <a href="#">Partners</a>
+            <a href="#">Use Cases</a>
+        </nav>
+        <div class="store-buttons">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Google_Play_Store_badge_EN.svg/1280px-Google_Play_Store_badge_EN.svg.png"
+                alt="Get it on Google Play">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Download_on_the_App_Store_Badge.svg/3840px-Download_on_the_App_Store_Badge.svg.png"
+                alt="Download on the App Store">
+        </div>
+
+        <div class="social-icons">
+            <a href="#"><img
+                    src="https://png.pngtree.com/png-clipart/20190516/original/pngtree-instagram-icon-png-image_3547981.jpg"
+                    alt="Instagram"></a>
+            <a href="#"><img
+                    src="https://toppng.com/uploads/preview/facebook-fb-logo-icon-round-outline-11689105241ortgye43t6.webp"
+                    alt="Facebook"></a>
+            <a href="#"><img
+                    src="https://static.vecteezy.com/system/resources/thumbnails/008/385/575/small/twitter-social-media-icon-logo-abstract-symbol-illustration-free-vector.jpg"
+                    alt="Twitter"></a>
+        </div>
+        <div class="footer-bottom">
+            <a href="#">Privacy Policy</a> | <a href="#">Terms & Conditions</a>
+            <p>&copy; 2025 SignFlexi. All rights reserved</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
