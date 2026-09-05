@@ -24,7 +24,6 @@ The main goals of this project were to:
 - Build a professional business website
 - Create a fully responsive layout
 - Practice modern HTML and CSS techniques
-- Add interactive elements using JavaScript
 - Create clear and user-friendly navigation
 - Improve UI/UX implementation skills
 - Practice designing websites for real-world business concepts
@@ -54,7 +53,6 @@ The main goals of this project were to:
 
 - HTML5
 - CSS3
-- JavaScript
 
 ### Tools & Platforms
 
@@ -99,7 +97,6 @@ signflexi-website/
 │
 ├── index.html
 ├── style.css
-├── script.js
 └── assets/
 ```
 
@@ -123,7 +120,6 @@ While building SignFlexi, I practiced:
 - Working with HTML semantic structure
 - Building reusable UI sections
 - Improving responsive navigation
-- Adding JavaScript-based interactions
 - Organizing frontend project files
 - Deploying a website using GitHub Pages
 - Improving UI/UX through hands-on implementation
@@ -219,7 +215,7 @@ If you found this project interesting, feel free to **star ⭐ the repository** 
 ---
 
 <p align="center">
-  Built with HTML, CSS & JavaScript ❤️
+  Built with HTML & CSS ❤️
 </p>
 
 <p align="center">
