@@ -1801,7 +1801,29 @@
        CONTACT + MESSAGE
     ========================= */
 
-            .contact-form,
+            .contact-form{
+                width: calc(100% - 30px) !important;
+                max-width: 500px;
+
+                height: auto !important;
+                min-height: 400px;
+
+                display: flex !important;
+                flex-direction: column;
+
+                position: static !important;
+
+                margin: 15px auto !important;
+
+                left: auto !important;
+                right: auto !important;
+                top: auto !important;
+
+                padding: 25px !important;
+
+                box-sizing: border-box;
+            }
+
             .message-form {
                 width: calc(100% - 30px) !important;
                 max-width: 500px;
@@ -1825,7 +1847,16 @@
                 box-sizing: border-box;
             }
 
-            .contact-form h2,
+            .contact-form h2 {
+                position: static !important;
+
+                margin: 0 0 30px !important;
+
+                text-align: center;
+
+                font-size: 28px;
+            }
+
             .message-form h2 {
                 position: static !important;
 
@@ -1839,15 +1870,16 @@
             .contact-form p {
                 display: grid;
 
-                grid-template-columns: 45px 65px 1fr;
+                grid-template-columns: 45px minmax(0, 1fr);
 
-                align-items: center;
+                align-items: start;
 
-                gap: 8px;
+                gap: 4px 10px;
 
                 margin: 12px 0 !important;
 
                 position: static !important;
+                min-width: 0;
             }
 
             .contact-form p img {
@@ -1855,6 +1887,14 @@
                 height: 40px;
 
                 position: static !important;
+                grid-row: 1 / span 2;
+                align-self: center;
+            }
+
+            .contact-form p p1,
+            .contact-form p span {
+                grid-column: 2;
+                min-width: 0;
             }
 
             .contact-form p p1 {
@@ -1869,6 +1909,8 @@
                 font-size: 14px;
 
                 line-height: 1.4;
+                min-width: 0;
+                overflow-wrap: anywhere;
             }
 
             .message-form form {
@@ -2187,7 +2229,16 @@
        CONTACT + MESSAGE
     ========================= */
 
-            .contact-form,
+            .contact-form {
+                width: calc(100% - 20px) !important;
+
+                min-height: 270px;
+
+                padding: 20px !important;
+
+                border-radius: 12px;
+            }
+
             .message-form {
                 width: calc(100% - 20px) !important;
 
@@ -2206,9 +2257,9 @@
             }
 
             .contact-form p {
-                grid-template-columns: 40px 55px 1fr;
+                grid-template-columns: 40px minmax(0, 1fr);
 
-                gap: 6px;
+                gap: 4px 8px;
             }
 
             .contact-form p img {
@@ -2303,7 +2354,7 @@
             }
 
             .contact-form p {
-                grid-template-columns: 35px 50px 1fr;
+                grid-template-columns: 35px minmax(0, 1fr);
             }
 
             .contact-form p span {
@@ -2646,7 +2697,7 @@
         </div>
         <div class="footer-bottom">
             <a href="#">Privacy Policy</a> | <a href="#">Terms & Conditions</a>
-            <p>&copy; 2025 SignFlexi. All rights reserved</p>
+            <p>&copy; 2026 SignFlexi. All rights reserved</p>
         </div>
     </footer>
 
