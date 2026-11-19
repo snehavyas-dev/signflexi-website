@@ -242,14 +242,24 @@
         }
 
         .logo-strip {
-            display: inline-block;
-            animation: 0s scroll 30s linear infinite;
+            display: block;
+            width: max-content;
+            animation: logo-scroll 30s linear infinite;
+            will-change: transform;
+        }
+
+        .tool-logos {
+            display: flex;
+            align-items: center;
+            width: max-content;
         }
 
         .logo-strip img {
             height: 35px;
+            width: 40px;
             margin: 0 30px;
             vertical-align: middle;
+            object-fit: contain;
         }
 
         @keyframes scroll {
@@ -259,6 +269,38 @@
 
             to {
                 transform: translateX(-100%);
+            }
+        }
+
+        @keyframes logo-scroll {
+            to {
+                transform: translateX(-33.333%);
+            }
+        }
+
+        .logo-container:hover .logo-strip {
+            animation-play-state: paused;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .logo-strip {
+                width: 100%;
+                animation: none;
+                will-change: auto;
+            }
+
+            .tool-logos {
+                width: 100%;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .tool-logos img:nth-child(n + 13) {
+                display: none;
+            }
+
+            .logo-strip img {
+                margin: 0 12px;
             }
         }
 
@@ -2421,40 +2463,47 @@
         <div class="logo-container">
             <div class="logo-strip">
                 <div class="tool-logos">
-                    <!-- Repeat logos for smooth loop -->
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCmXtLPjBXMhNAvJzFKHHHYA3cZ1Lw01mK4w&s"
-                        alt="Linux">
-                    <img src="https://logospng.org/wp-content/uploads/macos.png" alt="macOS">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/SAP_2011_logo.svg/1200px-SAP_2011_logo.svg.png"
-                        alt="SAP">
-                    <img src="https://solnetindia.com/wp-content/uploads/2024/10/tally.png" alt="Tally">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/f/fb/Google_Drive_-_New_Logo.png"
-                        alt="Google Drive">
-                    <img src="https://www.cdnlogo.com/logos/o/52/onedrive.svg" alt="OneDrive">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/23/Dropbox_Logo_01.svg" alt="Dropbox">
+                    <!-- Set 1 — SVG logos from cdn.simpleicons.org (tiny, fast, uniform) -->
+                    <img src="https://cdn.simpleicons.org/linux/333333" alt="Linux" width="40" height="40" loading="eager">
+                    <img src="https://cdn.simpleicons.org/apple/333333" alt="macOS" width="40" height="40" loading="eager">
+                    <img src="https://cdn.simpleicons.org/sap/0FAAFF" alt="SAP" width="40" height="40" loading="eager">
+                    <img src="https://cdn.simpleicons.org/googlesheets/0F9D58" alt="Tally" width="40" height="40" loading="eager">
+                    <img src="https://cdn.simpleicons.org/googledrive/4285F4" alt="Google Drive" width="40" height="40" loading="eager">
+                    <img src="https://cdn-icons-png.flaticon.com/512/732/732221.png" alt="OneDrive" width="40" height="40" loading="eager">
+                    <img src="https://cdn.simpleicons.org/dropbox/0061FF" alt="Dropbox" width="40" height="40" loading="eager">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Windows_logo_-_2012.svg" alt="Windows" width="40" height="40" loading="eager">
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@14.15.0/icons/slack.svg" alt="Slack" width="40" height="40" loading="eager">
+                    <img src="https://cdn.simpleicons.org/notion/333333" alt="Notion" width="40" height="40" loading="eager">
+                    <img src="https://cdn.simpleicons.org/zapier/FF4A00" alt="Zapier" width="40" height="40" loading="eager">
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@14.15.0/icons/salesforce.svg" alt="Salesforce" width="40" height="40" loading="eager">
 
-                    <!-- Repeat again -->
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCmXtLPjBXMhNAvJzFKHHHYA3cZ1Lw01mK4w&s"
-                        alt="Linux">
-                    <img src="https://logospng.org/wp-content/uploads/macos.png" alt="macOS">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/SAP_2011_logo.svg/1200px-SAP_2011_logo.svg.png"
-                        alt="SAP">
-                    <img src="https://solnetindia.com/wp-content/uploads/2024/10/tally.png" alt="Tally">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/f/fb/Google_Drive_-_New_Logo.png"
-                        alt="Google Drive">
-                    <img src="https://www.cdnlogo.com/logos/o/52/onedrive.svg" alt="OneDrive">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/23/Dropbox_Logo_01.svg" alt="Dropbox">
+                    <!-- Set 2 — duplicate for seamless scroll loop -->
+                    <img src="https://cdn.simpleicons.org/linux/333333" alt="Linux" width="40" height="40" loading="eager">
+                    <img src="https://cdn.simpleicons.org/apple/333333" alt="macOS" width="40" height="40" loading="eager">
+                    <img src="https://cdn.simpleicons.org/sap/0FAAFF" alt="SAP" width="40" height="40" loading="eager">
+                    <img src="https://cdn.simpleicons.org/googlesheets/0F9D58" alt="Tally" width="40" height="40" loading="eager">
+                    <img src="https://cdn.simpleicons.org/googledrive/4285F4" alt="Google Drive" width="40" height="40" loading="eager">
+                    <img src="https://cdn-icons-png.flaticon.com/512/732/732221.png" alt="OneDrive" width="40" height="40" loading="eager">
+                    <img src="https://cdn.simpleicons.org/dropbox/0061FF" alt="Dropbox" width="40" height="40" loading="eager">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Windows_logo_-_2012.svg" alt="Windows" width="40" height="40" loading="eager">
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@14.15.0/icons/slack.svg" alt="Slack" width="40" height="40" loading="eager">
+                    <img src="https://cdn.simpleicons.org/notion/333333" alt="Notion" width="40" height="40" loading="eager">
+                    <img src="https://cdn.simpleicons.org/zapier/FF4A00" alt="Zapier" width="40" height="40" loading="eager">
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@14.15.0/icons/salesforce.svg" alt="Salesforce" width="40" height="40" loading="eager">
 
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCmXtLPjBXMhNAvJzFKHHHYA3cZ1Lw01mK4w&s"
-                        alt="Linux">
-                    <img src="https://logospng.org/wp-content/uploads/macos.png" alt="macOS">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/SAP_2011_logo.svg/1200px-SAP_2011_logo.svg.png"
-                        alt="SAP">
-                    <img src="https://solnetindia.com/wp-content/uploads/2024/10/tally.png" alt="Tally">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/f/fb/Google_Drive_-_New_Logo.png"
-                        alt="Google Drive">
-                    <img src="https://www.cdnlogo.com/logos/o/52/onedrive.svg" alt="OneDrive">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/23/Dropbox_Logo_01.svg" alt="Dropbox">
+                    <!-- Set 3 — third copy for extra-wide screens -->
+                    <img src="https://cdn.simpleicons.org/linux/333333" alt="Linux" width="40" height="40" loading="eager">
+                    <img src="https://cdn.simpleicons.org/apple/333333" alt="macOS" width="40" height="40" loading="eager">
+                    <img src="https://cdn.simpleicons.org/sap/0FAAFF" alt="SAP" width="40" height="40" loading="eager">
+                    <img src="https://cdn.simpleicons.org/googlesheets/0F9D58" alt="Tally" width="40" height="40" loading="eager">
+                    <img src="https://cdn.simpleicons.org/googledrive/4285F4" alt="Google Drive" width="40" height="40" loading="eager">
+                    <img src="https://cdn-icons-png.flaticon.com/512/732/732221.png" alt="OneDrive" width="40" height="40" loading="eager">
+                    <img src="https://cdn.simpleicons.org/dropbox/0061FF" alt="Dropbox" width="40" height="40" loading="eager">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Windows_logo_-_2012.svg" alt="Windows" width="40" height="40" loading="eager">
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@14.15.0/icons/slack.svg" alt="Slack" width="40" height="40" loading="eager">
+                    <img src="https://cdn.simpleicons.org/notion/333333" alt="Notion" width="40" height="40" loading="eager">
+                    <img src="https://cdn.simpleicons.org/zapier/FF4A00" alt="Zapier" width="40" height="40" loading="eager">
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@14.15.0/icons/salesforce.svg" alt="Salesforce" width="40" height="40" loading="eager">
 
                 </div>
     </section>
